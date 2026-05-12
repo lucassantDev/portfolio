@@ -81,12 +81,21 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 800px)  {
-    .div-stack{width: 90%; height: fit-content; border: 1px solid red;}
+    .div-stack{
+        width: 75%; 
+        height: 50%;
+        margin: 0;
+        gap: 0;
+        flex-wrap: wrap; 
+        /* border: 1px solid red; */
+    }
 
     .stack{
         width: 150px;
-        font-size: 0.9rem;
+        font-size: 1rem;
+        color: var(--color04);
     }
+
 }
 
 @media screen and (min-width: 801px) and (max-width: 1920px) {
