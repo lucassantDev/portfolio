@@ -7,7 +7,7 @@ function Footer(){
     return(
         <>
             <footer className="text-center h-24">
-                <p className="text-[var(--color00)]">
+                <p className="text-[var(--color05)]">
                     © {anoAtual} - lucassantDev Portfólio
                 </p>
             </footer>

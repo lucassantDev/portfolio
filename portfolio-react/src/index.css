@@ -24,7 +24,10 @@ body{
     --color00: #FF5A13;
     --color01: #000DFF;
     --color02: #0FC4C4;
+    --color03: #FFFFFF;
     --color04: #D9D9D9;
     --color05: #2e2e2e;
+    --linkedinButtonColor: #0A66C2;
+    --githubButtonColor: #353a3f;
     --fontTitle: 'Inter Variable', 'Zalando Sans Expanded', system-ui, sans-serif;
 }
