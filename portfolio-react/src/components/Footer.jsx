@@ -1,14 +1,13 @@
-import '../style/Footer.css'
 
 function Footer(){
 
-    // pequeno script para o ano dinâmico
+    // pequeno script para o ano dinâmicocd
     let anoAtual = new Date().getFullYear();
 
     return(
         <>
-            <footer className="footer">
-                <p>
+            <footer className="text-center h-24">
+                <p className="text-sm md:text-[var(--color05)] md:text-lg">
                     © {anoAtual} - lucassantDev Portfólio
                 </p>
             </footer>
