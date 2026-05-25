@@ -1,5 +1,3 @@
-import '../style/AboutMe.css'
-
 function AboutMe(){
     return(
         <>
