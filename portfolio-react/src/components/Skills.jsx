@@ -1,4 +1,4 @@
-import '../style/Skills.css';
+
 
 import { FaReact } from "react-icons/fa";
 import { FiFigma } from "react-icons/fi";

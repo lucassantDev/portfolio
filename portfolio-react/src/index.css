@@ -40,6 +40,10 @@ body{
     color: var(--color03);
 }
 
+.section-h{
+    height: 100vh;
+}
+
 
 @keyframes floatIcon{
     0%, 100%{
