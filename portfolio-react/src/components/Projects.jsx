@@ -28,28 +28,27 @@ function Projects(){
 
     return(
     <>
-        <section className='border-2 w-full h-dvh flex flex-col items-center justify-evenly'>
-            <h1 className='project-title'>Projetos</h1>
+        <section className='border-2 w-full section-h flex flex-col items-center justify-evenly'>
+            <h1 className='text-[var(--color00)] text-2xl font-semibold md:font-semibold md:text-7xl'>Projetos</h1>
 
-                {projects.map(project => (
-                    // <h2>{project.title}</h2>
-                    <div className='border-2  w-2/3 h-fit flex flex-col items-center rounded-xl'>
-                        <h2 class='font-semibold'>
-                            {project.title}
-                        </h2>
-
-                        <img src={project.image} alt="imagem referente ao projeto" className='object-cover w-2/3 h-1/2 border-1' />
-
-                        <h3 class='text-center text-1xl w-2/3 border-2'>
-                            {project.description}
-                        </h3>
-
-                        <div className='w-1/2 border-2'>
-                            <a href={project.repository} target='_blank' class='bg-[var(--color01)] p-24 w-24 '>Repositório</a>
-                            <a href={project.link} target='_blank' class='bg-[var(--color01)] p-24 w-24 '>Projeto</a>
+                <div class='flex flex-col w-2/3 justify-evenly md:flex lg:flex'>
+                    {projects.map(project => (
+                        // <h2>{project.title}</h2>
+                        <div className='border-2 border-[var(--color00)] w-96 flex flex-col items-center rounded-xl p-6 gap-4'>
+                            <h2 className='font-semibold text-2xl text-[var(--color01)]'>
+                                {project.title}
+                            </h2>
+                            <img src={project.image} alt="imagem referente ao projeto" className='object-cover w-2/3 h-1/2 border-1 rounded-lg border-[var(--color01)]' />
+                            <h3 className='text-center text-1xl w-2/3 border-2'>
+                                {project.description}
+                            </h3>
+                            <div className='w-2/3 h-12 border-2 flex items-center justify-evenly'>
+                                <a href={project.repository} target='_blank' className='rounded-lg bg-[var(--color01)] hover:bg-[var(--color05)] h-8 w-28 text-[var(--color03)] flex justify-center items-center'>Repositório</a>
+                                <a href={project.link} target='_blank' className='rounded-lg bg-[var(--color01)] hover:bg-[var(--color05)] h-8 w-28 text-[var(--color03)] flex justify-center items-center'>Projeto</a>
+                            </div>
                         </div>
-                    </div> 
-                ))}
+                    ))}
+                </div>
         </section>
     </>
         
