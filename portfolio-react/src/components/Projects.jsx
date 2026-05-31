@@ -1,4 +1,4 @@
-import '../style/Projects.css'
+import '../index.css'
 import { useState } from 'react'
 
 import listaCompras from '../assets/img/projeto-listaDeCompras.png';
@@ -28,25 +28,25 @@ function Projects(){
 
     return(
     <>
-        <section className='section-projects'>
+        <section className='border-2 w-full h-dvh flex flex-col items-center justify-evenly'>
             <h1 className='project-title'>Projetos</h1>
 
                 {projects.map(project => (
                     // <h2>{project.title}</h2>
-                    <div className='displayMap'>
-                        <h2>
+                    <div className='border-2  w-2/3 h-fit flex flex-col items-center rounded-xl'>
+                        <h2 class='font-semibold'>
                             {project.title}
                         </h2>
 
-                        <img src={project.image} alt="imagem referente ao projeto" className='imageMap' />
+                        <img src={project.image} alt="imagem referente ao projeto" className='object-cover w-2/3 h-1/2 border-1' />
 
-                        <h3>
+                        <h3 class='text-center text-1xl w-2/3 border-2'>
                             {project.description}
                         </h3>
 
-                        <div className='button-acess-projects'>
-                            <a href={project.repository} target='_blank'>Repositório</a>
-                            <a href={project.link} target='_blank'>Projeto</a>
+                        <div className='w-1/2 border-2'>
+                            <a href={project.repository} target='_blank' class='bg-[var(--color01)] p-24 w-24 '>Repositório</a>
+                            <a href={project.link} target='_blank' class='bg-[var(--color01)] p-24 w-24 '>Projeto</a>
                         </div>
                     </div> 
                 ))}
