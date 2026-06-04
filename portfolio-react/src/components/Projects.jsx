@@ -28,23 +28,25 @@ function Projects(){
 
     return(
     <>
-        <section className='border-2 w-full section-h flex flex-col items-center justify-evenly'>
+        <section className=' w-full section-h flex flex-col items-center justify-evenly'>
             <h1 className='text-[var(--color00)] text-2xl font-semibold md:font-semibold md:text-7xl'>Projetos</h1>
 
-                <div class='flex flex-col w-2/3 justify-evenly md:flex lg:flex'>
+                <div className='grid grid-cols-2 gap-6 w-2/3 h-2/3'>
                     {projects.map(project => (
-                        // <h2>{project.title}</h2>
-                        <div className='border-2 border-[var(--color00)] w-96 flex flex-col items-center rounded-xl p-6 gap-4'>
-                            <h2 className='font-semibold text-2xl text-[var(--color01)]'>
+                            <div key={project.id} className='w-full h-4/5 rounded-lg overflow-hidden flex flex-col items-center justify-between'>
+                            <h2 className='font-semibold text-3xl text-[var(--color01)] text-center py-4 mb-10'>
                                 {project.title}
                             </h2>
-                            <img src={project.image} alt="imagem referente ao projeto" className='object-cover w-2/3 h-1/2 border-1 rounded-lg border-[var(--color01)]' />
-                            <h3 className='text-center text-1xl w-2/3 border-2'>
-                                {project.description}
-                            </h3>
-                            <div className='w-2/3 h-12 border-2 flex items-center justify-evenly'>
-                                <a href={project.repository} target='_blank' className='rounded-lg bg-[var(--color01)] hover:bg-[var(--color05)] h-8 w-28 text-[var(--color03)] flex justify-center items-center'>Repositório</a>
-                                <a href={project.link} target='_blank' className='rounded-lg bg-[var(--color01)] hover:bg-[var(--color05)] h-8 w-28 text-[var(--color03)] flex justify-center items-center'>Projeto</a>
+                                <div className='relative group w-2/3 h-80 border-2 border-[var(--color00)] rounded-lg overflow-hidden bg-center bg-cover' style={{ backgroundImage: `url(${project.image})` }}>
+                                    <div className='absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-4' style={{ background: 'linear-gradient(to top, rgba(16, 16, 17, 0.85), transparent)' }}>
+                                        <p className='text-[var(--color03)] text-center font-semibold text-sm w-full transform -translate-y-12'>
+                                            {project.description}
+                                        </p>
+                                    </div>
+                            </div>
+                            <div className='flex gap-3 mr-24 mt-2'>
+                                    <a href={project.repository} target='_blank' rel='noreferrer' className='rounded-lg w-24 bg-[var(--color01)] hover:bg-[var(--color05)] h-12 px-6 text-[var(--color03)] flex justify-center items-center'>Repositório</a>
+                                    <a href={project.link} target='_blank' rel='noreferrer' className='rounded-lg w-24 bg-[var(--color01)] hover:bg-[var(--color05)] h-12 px-12 text-[var(--color03)] flex justify-center items-center'>Projeto</a>
                             </div>
                         </div>
                     ))}
