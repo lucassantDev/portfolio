@@ -31,13 +31,13 @@ function Projects(){
         <section className=' w-full section-h flex flex-col items-center justify-evenly'>
             <h1 className='text-[var(--color00)] text-2xl font-semibold md:font-semibold md:text-7xl'>Projetos</h1>
 
-                <div className='grid grid-cols-2 gap-6 w-2/3 h-2/3'>
+                <div className='flex flex-col md:grid md:grid-cols-2 gap-6 w-2/3 h-2/3'>
                     {projects.map(project => (
                             <div key={project.id} className='w-full h-4/5 rounded-lg overflow-hidden flex flex-col items-center justify-between'>
-                            <h2 className='font-semibold text-3xl text-[var(--color01)] text-center py-4 mb-10'>
+                            <h2 className='font-semibold text-lg md:text-3xl text-[var(--color01)] text-center py-4 mb-10'>
                                 {project.title}
                             </h2>
-                                <div className='relative group w-2/3 h-80 border-2 border-[var(--color00)] rounded-lg overflow-hidden bg-center bg-cover' style={{ backgroundImage: `url(${project.image})` }}>
+                                <div className='relative group w-46 h-46 md:w-2/3 md:h-80 border-2 border-[var(--color00)] rounded-lg overflow-hidden bg-center bg-cover' style={{ backgroundImage: `url(${project.image})` }}>
                                     <div className='absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-4' style={{ background: 'linear-gradient(to top, rgba(16, 16, 17, 0.85), transparent)' }}>
                                         <p className='text-[var(--color03)] text-center font-semibold text-sm w-full transform -translate-y-12'>
                                             {project.description}
