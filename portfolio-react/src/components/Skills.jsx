@@ -12,7 +12,7 @@ import { FaLaravel } from "react-icons/fa6";
 function Skills(){
     return (
         <>
-            <section className="gap-8 w-full border-2 h-screen bg-[var(--color01)] flex flex-col items-center justify-center md:gap-12">
+            <section className="gap-8 w-full h-screen bg-[var(--color01)] flex flex-col items-center justify-center md:gap-12">
                 <h1 className="text-2xl font-semibold text-[var(--color03)] md:font-semibold md:text-7xl">Skills</h1>
                 <div className='w-1/2 grid grid-cols-2 gap-6 md:w-80 md:gap-12'>
 
