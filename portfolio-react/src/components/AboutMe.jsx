@@ -1,8 +1,9 @@
+
 function AboutMe(){
     return(
         <>
         <section className='flex flex-col items-center justify-center w-full h-screen bg-[var(--color05)] text-[var(--color04)] gap-8'>
-                <h1 className='text-2xl font-semibold md:font-semibold md:text-7xl'>Sobre Mim</h1>
+                <h1 className='firstSectionFont pb-6 text-2xl font-semibold md:font-semibold md:text-7xl '>Sobre Mim</h1>
                 <p className='w-74 text-lg  md:text-4xl md:w-2/3 text-center'>
                     Me chamo Lucas Santana, tenho 20 anos, sou de Recife e atualmente estou no 3° período de Análise e Desenvolvimento de Sistemas na Faculdade Senac. <br/> <br/>
 
