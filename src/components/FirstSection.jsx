@@ -21,7 +21,7 @@ function FirstSection(){
 
             {/* <img src={lucassantDev} alt="imagem de Lucas Santana" /> */}
             
-            <div className='w-full flex flex-col items-center gap-2  md:w-3/4 md:flex md:items-center md:justify-evenly lg:w-4/5'>
+            <div className='w-full flex items-center gap-2  md:w-3/4 md:flex md:items-center md:justify-evenly lg:w-4/5'>
                 <div className='bg-[var(--linkedinButtonColor)] text-[var(--color03)] w-64 h-12 flex items-center justify-evenly md:border md:border-[var(--color05)] md:bg-white md:text-[var(--color05)] md:cursor-pointer md:flex md:items-center md:justify-evenly md:w-1/4 md:h-16 md:text-xl  md:hover:bg-[var(--linkedinButtonColor)] md:hover:text-white md:transition-colors duration-200' onClick={linkedinLink}>
                     Linkedin
                     <LinkedinIcon className="icon"/>
