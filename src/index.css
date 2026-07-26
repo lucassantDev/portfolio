@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Fonte variável local (adicione o arquivo em public/fonts/) */
+
+body{
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+:root{
+    --color00: #FF5A13;
+    --color01: #000DFF;
+    --color02: #0FC4C4;
+    --color03: #FFFFFF;
+    --color04: #D9D9D9;
+    --color05: #2e2e2e;
+    --linkedinButtonColor: #0A66C2;
+    --githubButtonColor: #353a3f;
+    /* --fontTitle:'Zalando Sans Expanded', system-ui, sans-serif; */
+}
+
+.skill-card{
+    animation: floatIcon 1.8s linear infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color03);
+}
+
+.section-h{
+    height: 100vh;
+}
+
+.firstSectionFont{
+    font-family: 'Zalando Sans Expanded';
+}
+
+
+@keyframes floatIcon{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+
+.skill-card:nth-child(1){ animation-delay: 0s; }
+.skill-card:nth-child(2){ animation-delay: 0.1s; }
+.skill-card:nth-child(3){ animation-delay: 0.2s; }
+.skill-card:nth-child(4){ animation-delay: 0.3s; }
+.skill-card:nth-child(5){ animation-delay: 0.4s; }
+.skill-card:nth-child(6){ animation-delay: 0.5s; }
+.skill-card:nth-child(7){ animation-delay: 0.6s; }
