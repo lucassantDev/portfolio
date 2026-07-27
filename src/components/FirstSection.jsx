@@ -1,40 +1,49 @@
-import { LinkedinIcon, GithubIcon } from 'lucide-react'
-import lucassantDev from '../assets/img/lucassant-02.jpg'
+import { useEffect, useState } from 'react'
+import { IoLogoLinkedin } from "react-icons/io";
+import { FaGithubSquare } from "react-icons/fa";
 import '../index.css'
 
+
 function FirstSection(){ 
+    const [isVisible, setIsVisible] = useState(false)
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsVisible(true)
+        }, 400)
 
-    const githubLink = ()=>{
-        window.open('https://github.com/lucassantDev', 'target=blank')
+        return () => clearTimeout(timer)
+    }, [])
+
+    function myLinks(event){
+        const value = event.currentTarget.value
+
+        if(value === 'linkedin'){
+            console.log('botão do linkedin')
+        }else{
+            console.log('botão do github')
+        }
     }
-
-    const linkedinLink = () => {
-        window.open('https://www.linkedin.com/in/lucassantdev', 'target=blank')
-    }
-
 
     return  <>
-        <section className="firstSection w-full h-screen flex flex-col items-center justify-evenly">
-            <img src={lucassantDev} alt="imagem de Lucas Santana" className="rounded-xl object-cover w-48 h-72 md:w-80 md:h-96  lg:w-94"/>
-            <h1 className='firstSectionFont text-[var(--color05)] p-2 text-center text-2xl font-semibold md:font-normal md:text-6xl md:text-center'>Um estudante curioso  <br />pelo mundo da tecnologia!</h1>
-
-            {/* <img src={lucassantDev} alt="imagem de Lucas Santana" /> */}
-            
-            <div className='w-full flex items-center gap-2  md:w-3/4 md:flex md:items-center md:justify-evenly lg:w-4/5'>
-                <div className='bg-[var(--linkedinButtonColor)] text-[var(--color03)] w-64 h-12 flex items-center justify-evenly md:border md:border-[var(--color05)] md:bg-white md:text-[var(--color05)] md:cursor-pointer md:flex md:items-center md:justify-evenly md:w-1/4 md:h-16 md:text-xl  md:hover:bg-[var(--linkedinButtonColor)] md:hover:text-white md:transition-colors duration-200' onClick={linkedinLink}>
-                    Linkedin
-                    <LinkedinIcon className="icon"/>
-
-                </div>
-                <div className=' bg-[var(--githubButtonColor)] text-[var(--color03)] w-64 h-12 flex items-center justify-evenly md:border md:border-[var(--color05)] md:bg-white md:text-[var(--color05)] md:cursor-pointer md:flex md:items-center md:justify-evenly md:w-1/4 md:h-16 md:text-xl  md:hover:bg-[var(--githubButtonColor)] md:hover:text-white md:transition-colors duration-200' onClick={githubLink}>
-                    Github
-                    <GithubIcon className='icon'/>
-                </div>
+        <section className="w-full h-screen border flex flex-col items-center justify-center">
+            <h1 className={`text-9xl font-bold transition duration-450 ${isVisible ? 'opacity-100' : 'opacity-0'} bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent`}>
+                Lucas Santana
+            </h1>
+            <p className='mt-4 font-semibold'>um dev curioso pelo ecossistema da programação</p>
+            <div className='flex w-64 h-24 items-center justify-evenly mt-6'>
+                <button value="linkedin" className='p-5 border transition duration-150 hover:-translate-y-1' onClick={myLinks}>
+                    <IoLogoLinkedin 
+                    className='text-3xl'
+                    />
+                </button>
+                <button value="github" className='p-5 border transition duration-150 hover:-translate-y-1' onClick={myLinks}>
+                    <FaGithubSquare 
+                    className='text-3xl'
+                    />
+                </button>
             </div>
         </section>
-
-        
     </>
   
 }
