@@ -3,6 +3,7 @@ import { RiJavascriptFill } from "react-icons/ri";
 import { GrMysql } from "react-icons/gr";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaGitAlt } from "react-icons/fa6";
+import { FaPhp } from "react-icons/fa6";
 
 function Skills(){
 
@@ -37,18 +38,28 @@ function Skills(){
             icon: <RiTailwindCssFill />,
             color: 'text-cyan-600'
         },
+        {
+            id: 6,
+            stack: 'PHP',
+            icon: <FaPhp />,
+            color: 'text-purple-800'
+        },
 
     ]
 
+
     return (
         <>
-            <section className=" w-full h-screen border flex flex-col items-center justify-center">
-                <h1 className='text-9xl font-bold bg-gradient-to-r from-emerald-400 to-blue-600 bg-clip-text text-transparent'>Skills</h1>
-                <div className='p-24 flex justify-beetwen'>
+            <section className="w-full h-screen flex flex-col items-center bg-slate-700 bg-slate-700 before:w-64 before:h-1 before:bg-emerald-300">
+                <h1 className='text-3xl font-bold text-emerald-300 mt-14'>Tecnologias</h1>
+                <div className='mt-12 p-10 border-2 border-emerald-300 grid grid-cols-2 gap-4 rounded-md'>
                     {skills.map((skill) =>
-                        <div className='w-48 h-48 flex items-center justify-evenly ml-2 mr-2 shadow-lg transition duration-150 hover:ring-2 hover:ring-blue-400 hover:-translate-y-2 '>
-                            <div className={`text-5xl flex items-center ${skill.color}`}>{skill.icon}</div>
+                        <div className='w-24 h-24 pt-2 bg-slate-50 rounded-md flex flex-col items-center justify-evenly ml-2 mr-2 shadow-lg transition duration-150 hover:ring-2 hover:ring-emerald-300 hover:-translate-y-2 '>
+                            <div className={`text-4xl flex items-center ${skill.color}`}>{skill.icon}</div>
+                            <p className='text-sm text-slate-400'>{skill.stack}</p>
                         </div>
+
+                        //  bg-gradient-to-r from-emerald-400 to-blue-600 bg-clip-text text-transparent
                     )}
                 </div>
             </section>

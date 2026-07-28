@@ -6,8 +6,8 @@ function Footer(){
 
     return(
         <>
-            <footer className="flex itms-center justify-center h-30 py-12">
-                <p className="text-sm md:text-[var(--color05)] md:text-lg">
+            <footer className="flex items-center justify-center h-30 py-12 bg-slate-800">
+                <p className="text-emerald-300">
                     © {anoAtual} - lucassantDev Portfólio
                 </p>
             </footer>
