@@ -50,8 +50,8 @@ function Skills(){
 
     return (
         <>
-            <section className="w-full h-screen flex flex-col items-center bg-slate-700 bg-slate-700 before:w-64 before:h-1 before:bg-emerald-300">
-                <h1 className='text-3xl font-bold text-emerald-300 mt-14'>Tecnologias</h1>
+            <section className="w-full border-2 h-screen flex flex-col items-center  bg-slate-700 before:w-64 before:h-1 before:bg-emerald-300">
+                <h1 className='text-3xl font-bold text-emerald-300 m-10'>Tecnologias</h1>
                 <div className='mt-12 p-10 border-2 border-emerald-300 grid grid-cols-2 gap-4 rounded-md'>
                     {skills.map((skill) =>
                         <div className='w-24 h-24 pt-2 bg-slate-50 rounded-md flex flex-col items-center justify-evenly ml-2 mr-2 shadow-lg transition duration-150 hover:ring-2 hover:ring-emerald-300 hover:-translate-y-2 '>
