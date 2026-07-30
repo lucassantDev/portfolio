@@ -17,7 +17,7 @@ function FirstSection(){
     }
 
     return  <>
-        <section className="w-full h-screen flex flex-col items-center justify-center bg-slate-700 px-12">
+        <section className="w-full h-screen flex flex-col items-center justify-center bg-slate-900 px-12">
             <img src={lucassantDev} className='w-48 rounded-full mt-6 border-3 border-emerald-500 select-none'/>
             <h1 className={`
                 firstSectionFont text-3xl text-center font-bold bg-linear-to-r from-slate-200 to-emerald-500 bg-clip-text text-transparent select-none my-6
