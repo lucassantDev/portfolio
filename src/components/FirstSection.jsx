@@ -1,28 +1,17 @@
 import { useEffect, useState } from 'react';
-import { IoLogoLinkedin } from "react-icons/io";
-import { FaGithubSquare } from "react-icons/fa";
 import lucassantDev from '../assets/img/lucas.jpeg';
 import { TextAnimate } from "@/components/ui/text-animate";
 import { DiaTextReveal } from "@/components/ui/dia-text-reveal"
 
 function FirstSection(){ 
-    function myLinks(event){
-        const value = event.currentTarget.value
-
-        if(value === 'linkedin'){
-            window.open('https://www.linkedin.com/in/lucassantdev/')
-        }else{
-            window.open('https://github.com/lucassantDev')
-        }
-    }
 
     return  <>
         <section 
         className="
-        border-2 px-2 w-full h-screen flex flex-col justify-center 
-        md:h-dvh
+        border-2 px-2 w-full h-140 flex flex-col justify-center
+        md:h-220
         ">
-            <TextAnimate animation="blurIn" as="h1" className='text-slate-800 text-2xl mb-4 font-semibold md:text-4xl'>
+            <TextAnimate animation="blurIn" as="h1" className='text-slate-800 text-2xl mb-6 font-semibold md:text-4xl'>
                 Lucas Santana
             </TextAnimate>
             <img src={lucassantDev} 
@@ -33,7 +22,7 @@ function FirstSection(){
             />
             <h2 
             className="
-                text-2xl font-bold mt-4
+                text-2xl font-bold mt-6
                 md:text-7xl
             ">
                     {" "}
