@@ -151,3 +151,7 @@
     @apply font-sans;
     }
 }
+
+body{
+  padding-inline: 44px;
+}

@@ -14,9 +14,10 @@ function App() {
     <>
       <FirstSection/>
       <AboutMe/>
+      {/* 
       <Skills/>
       <Projects/>
-      <Footer/>
+      <Footer/> */}
     </>
   )
 }
