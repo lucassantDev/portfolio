@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import lucassantDev from '../assets/img/lucas.jpeg';
 import { TextAnimate } from "@/components/ui/text-animate";
 import { DiaTextReveal } from "@/components/ui/dia-text-reveal"
@@ -11,7 +10,7 @@ function FirstSection(){
         border-2 px-2 w-full h-140 flex flex-col justify-center
         md:h-220
         ">
-            <TextAnimate animation="blurIn" as="h1" className='text-slate-800 text-2xl mb-6 font-semibold md:text-4xl'>
+            <TextAnimate animation="blurIn" as="h1" className='text-slate-800 text-2xl mb-6 font-bold md:text-4xl'>
                 Lucas Santana
             </TextAnimate>
             <img src={lucassantDev} 
