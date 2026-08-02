@@ -1,4 +1,3 @@
-import { TextReveal } from "@/components/ui/text-reveal"
 import { AuroraText } from "@/components/ui/aurora-text"
 
 function AboutMe(){

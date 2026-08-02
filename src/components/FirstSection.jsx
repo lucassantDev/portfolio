@@ -1,6 +1,6 @@
 import lucassantDev from '../assets/img/lucas.jpeg';
 import { TextAnimate } from "@/components/ui/text-animate";
-import { DiaTextReveal } from "@/components/ui/dia-text-reveal"
+import { DiaTextReveal } from "@/components/ui/dia-text-reveal";
 
 function FirstSection(){ 
 

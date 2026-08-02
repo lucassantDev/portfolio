@@ -1,7 +1,6 @@
 
 function Footer(){
 
-    // pequeno script para o ano dinâmicocd
     let anoAtual = new Date().getFullYear();
 
     return(
