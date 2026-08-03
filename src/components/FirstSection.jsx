@@ -7,10 +7,10 @@ function FirstSection(){
     return  <>
         <section 
         className="
-        border-2 px-2 w-full h-140 flex flex-col justify-center
+        border-2 px-2 w-full h-140 flex flex-col justify-center bg-slate-900
         md:h-220
         ">
-            <TextAnimate animation="blurIn" as="h1" className='text-slate-800 text-2xl mb-6 font-bold md:text-4xl'>
+            <TextAnimate animation="blurIn" as="h1" className=' text-gray-300 text-2xl mb-6 font-bold md:text-4xl'>
                 Lucas Santana
             </TextAnimate>
             <img src={lucassantDev} 
