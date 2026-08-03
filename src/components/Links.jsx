@@ -15,17 +15,17 @@ function Links(){
 
     return(
         <>
-            <div className='border-2 h-12 flex items-center px-2'>
+            <div className='h-12 flex items-center px-2 bg-slate-900'>
                 <button value={'linkedin'} onClick={myLinks}>
                     <IoLogoLinkedin
                     size={25}
-                    className='cursor-pointer transition duration-150 hover:text-blue-600'
+                    className='text-slate-300 cursor-pointer transition duration-150 hover:text-blue-600'
                     />
                 </button>
                 <button value={'github'} onClick={myLinks} className='w-48'>
                     <FaGithubSquare
                     size={25}
-                    className='cursor-pointer transition duration-150 hover:text-blue-600'
+                    className='text-slate-300 cursor-pointer transition duration-150 hover:text-blue-600'
                     />
                 </button>
             </div>
