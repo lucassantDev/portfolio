@@ -6,8 +6,6 @@ import Skills from './components/Skills.jsx'
 import Projects from './components/Projects.jsx'
 import Footer from './components/Footer.jsx'
 
-
-
 function App() {
   // const [projetos, setProjetos] = useState('')
 
@@ -17,9 +15,9 @@ function App() {
       <Links/>
       <AboutMe/>
       <Skills/>
-      {/* 
       <Projects/>
-      <Footer/> */}
+      <Footer/>
+
     </>
   )
 }
