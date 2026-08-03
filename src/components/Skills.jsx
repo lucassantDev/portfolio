@@ -4,6 +4,7 @@ import { GrMysql } from "react-icons/gr";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaGitAlt } from "react-icons/fa6";
 import { FaPhp } from "react-icons/fa6";
+import { AuroraText } from "@/components/ui/aurora-text"
 
 function Skills(){
 
@@ -12,37 +13,37 @@ function Skills(){
             id: 1,
             stack: 'JavaScript',
             icon: <RiJavascriptFill/>,
-            color: 'text-yellow-400'
+            color: ['oklch(90.5% 0.182 98.111)', 'oklch(66.6% 0.179 58.318)']
         },
         {
             id: 2,
             stack: 'React',
             icon: <FaReact/>,
-            color: 'text-blue-600'
+            color: ['oklch(37.9% 0.146 265.522)', 'oklch(48.8% 0.243 264.376)']
         },
         {
             id: 3,
             stack: 'MySQL',
             icon: <GrMysql />,
-            color: 'text-gray-500'
+            color: ['oklch(87% 0 none)', 'oklch(70.5% 0.015 286.067)']
         },
         {
             id: 4,
             stack: 'Git',
             icon: <FaGitAlt />,
-            color: 'text-orange-600'
+            color: ['oklch(64.6% 0.222 41.116)', 'oklch(83.7% 0.128 66.29)']
         },
         {
             id: 5,
             stack: 'Tailwind',
             icon: <RiTailwindCssFill />,
-            color: 'text-cyan-600'
+            color: ['oklch(86.5% 0.127 207.078)', 'oklch(60.9% 0.126 221.723)'] 
         },
         {
             id: 6,
             stack: 'PHP',
             icon: <FaPhp />,
-            color: 'text-purple-800'
+            color: ['oklch(71.4% 0.203 305.504)', 'oklch(28.3% 0.141 291.089)', 'oklch(54.1% 0.281 293.009)']
         },
 
     ]
@@ -50,17 +51,24 @@ function Skills(){
 
     return (
         <>
-            <section className="w-full h-screen flex flex-col items-center bg-slate-700 before:w-64 before:h-px before:bg-emerald-300">
-                <h1 className='text-3xl font-bold text-emerald-300 mt-12 md:text-4xl'>Tecnologias</h1>
-                <div className='mt-12 p-10 border-2 border-emerald-300 grid grid-cols-2 gap-4 rounded-md md:grid-cols-3'>
+            <section className="
+            border-2 px-2 w-full h-screen flex flex-col justify-center items-center bg-slate-900
+            ">
+                <h1 className='text-3xl font-bold text-gray-300 mb-6 md:text-4xl'>Tecnologias</h1>
+                <div className='
+                w-fit grid grid-cols-2 gap-4 rounded-md 
+                md:grid md:py-6 md:'>
                     {skills.map((skill) =>
-                        <div className='
-                        w-24 h-24 pt-2 bg-slate-50 rounded-md flex flex-col items-center justify-evenly ml-2 mr-2 shadow-lg transition duration-150 hover:ring-2 hover:ring-emerald-300 hover:-translate-y-2 
-                        md:w-44 md:h-44
-                        '>
-                        <div className={`text-4xl flex items-center md:text-5xl ${skill.color}`}>{skill.icon}</div>
-                        <p className='text-sm text-slate-400'>{skill.stack}</p>
-                        </div>
+                    <div className='flex flex-col justify-center items-center mt-4 mb-4'>
+                            <div className={`text-1xl items-center mb-2 text-gray-300 md:text-3xl `}>{skill.icon}</div>
+                            <AuroraText 
+                            className='
+                            text-2xl font-bold
+                            md:text-7xl' 
+                            colors={[skill.color]}>
+                                {skill.stack}
+                            </AuroraText>
+                            </div>
 
                         //  bg-gradient-to-r from-emerald-400 to-blue-600 bg-clip-text text-transparent
                     )}
