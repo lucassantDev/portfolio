@@ -3,7 +3,7 @@ import { AuroraText } from "@/components/ui/aurora-text"
 function AboutMe(){
     return(
         <>
-        <section className='border-2 px-2 w-full h-screen flex flex-col justify-center bg-slate-900'>
+        <section className='px-2 w-full h-screen flex flex-col justify-center bg-slate-900'>
             <h2 className='text-3xl font-bold text-gray-300 mb-6 md:text-4xl'>Sobre Mim</h2>
             <AuroraText 
             className='

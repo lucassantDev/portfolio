@@ -7,8 +7,8 @@ function FirstSection(){
     return  <>
         <section 
         className="
-        border-2 px-2 w-full h-140 flex flex-col justify-center bg-slate-900
-        md:h-220
+        px-2 w-full h-140 flex flex-col justify-center bg-slate-900
+        md:h-216
         ">
             <TextAnimate animation="blurIn" as="h1" className=' text-gray-300 text-2xl mb-6 font-bold md:text-4xl'>
                 Lucas Santana
@@ -16,13 +16,13 @@ function FirstSection(){
             <img src={lucassantDev} 
             className='
                 h-1/2 object-cover rounded-sm
-                md:w-3/4 md:h-120 md:object-cover md:rounded-none
+                md:w-2/3 md:h-124 md:object-cover md:rounded-none
             '
             />
             <h2 
             className="
-                text-2xl font-bold mt-6
-                md:text-7xl
+                text-3xl font-bold mt-6
+                md:text-8xl
             ">
                     {" "}
                 <DiaTextReveal

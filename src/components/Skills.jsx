@@ -4,6 +4,8 @@ import { GrMysql } from "react-icons/gr";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaGitAlt } from "react-icons/fa6";
 import { FaPhp } from "react-icons/fa6";
+import { FaFigma } from "react-icons/fa";
+import { SiN8N } from "react-icons/si";
 import { AuroraText } from "@/components/ui/aurora-text"
 
 function Skills(){
@@ -19,7 +21,7 @@ function Skills(){
             id: 2,
             stack: 'React',
             icon: <FaReact/>,
-            color: ['oklch(37.9% 0.146 265.522)', 'oklch(48.8% 0.243 264.376)']
+            color: ['oklch(37.9% 0.146 265.522)', 'oklch(48.8% 0.243 264.376)', 'oklch(62.3% 0.214 259.815)']
         },
         {
             id: 3,
@@ -45,6 +47,18 @@ function Skills(){
             icon: <FaPhp />,
             color: ['oklch(71.4% 0.203 305.504)', 'oklch(28.3% 0.141 291.089)', 'oklch(54.1% 0.281 293.009)']
         },
+        {
+            id: 7,
+            stack: 'Figma',
+            icon: <FaFigma />,
+            color: ['oklch(79.2% 0.209 151.711)', 'oklch(79.2% 0.209 151.711)', 'oklch(82.8% 0.111 230.318)']
+        },
+        {
+            id: 8,
+            stack: 'N8N',
+            icon: <SiN8N />,
+            color: ['oklch(70.4% 0.191 22.216)', 'oklch(70.4% 0.191 22.216)', 'oklch(44.4% 0.177 26.899)']
+        },
 
     ]
 
@@ -52,7 +66,7 @@ function Skills(){
     return (
         <>
             <section className="
-            border-2 px-2 w-full h-screen flex flex-col justify-center items-center bg-slate-900
+             px-2 w-full h-screen flex flex-col justify-center items-center bg-slate-900
             ">
                 <h1 className='text-3xl font-bold text-gray-300 mb-6 md:text-4xl'>Tecnologias</h1>
                 <div className='
