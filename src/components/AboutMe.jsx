@@ -7,7 +7,7 @@ function AboutMe(){
             <h2 className='text-3xl font-bold text-gray-300 mb-6 md:text-4xl'>Sobre Mim</h2>
             <AuroraText 
             className='
-            text-2xl font-semibold
+            text-3xl font-semibold
             md:text-7xl md:font-bold'
             colors={["oklch(86.5% 0.127 207.078)", "oklch(48.8% 0.243 264.376)"]}
             >

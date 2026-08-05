@@ -21,7 +21,7 @@ function FirstSection(){
             />
             <h2 
             className="
-                text-3xl font-bold mt-6
+                text-4xl font-bold mt-8
                 md:text-8xl
             ">
                     {" "}
@@ -32,7 +32,7 @@ function FirstSection(){
                     duration={4}
                     colors={[ '#f6f6f6', 'oklch(42.4% 0.199 265.638)']}
                     textColor='oklch(54.6% 0.245 262.881)'
-                    text={["um dev curioso pelo mundo da tecnologia!"]}
+                    text={[`um dev curioso pelo mundo da tecnologia!`]}
                 />
             </h2>
         
