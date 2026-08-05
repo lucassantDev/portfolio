@@ -39,12 +39,12 @@ function Projects() {
 
                 <h1 className='mb-6 text-3xl font-bold text-gray-300 md:text-4xl'>Projetos</h1>
 
-                <div className='border p-8 flex flex-col gap-2 md:w-1/2 '>
+                <div className='h-fit border p-8 flex flex-col gap-2 md:w-1/2 '>
                     {projects.map((project, index) => (
                         <div
                             key={project.id ?? index}
                             className='
-                            h-64 w-64 shrink-0 rounded-lg border-2 border-slate-700 bg-slate-800 p-4 text-gray-200
+                            h-fit w-64 shrink-0 rounded-lg border-2 border-slate-700 bg-slate-800 p-4 text-gray-200
                             md:w-full md:h-fit
                             '
                         >
@@ -65,12 +65,12 @@ function Projects() {
                                 </div>
                             }
                             <hr className='mt-2 bg-slate-800'/>
-                            <div className='mt-4'>
-                                <button className='cursor-pointer p-2 mr-2 bg-blue-500 rounded-sm transition duration-300 hover:-translate-y-1' onClick={() => divProjeto(project.id)}>
+                            <div className='mt-4  flex flex-wrap'>
+                                <button className='w-fit cursor-pointer p-2 mr-2 bg-blue-500 rounded-sm transition duration-300 hover:-translate-y-1' onClick={() => divProjeto(project.id)}>
                                     {projetoClicado === project.id ?  'Fechar' : 'Ver'}
                                 </button>
-                                <button className='cursor-pointer p-2 bg-blue-500 rounded-sm transition duration-300 hover:-translate-y-2' >Projeto</button> 
-                                <button className='cursor-pointer p-2 bg-blue-500 rounded-sm ml-2 transition duration-300 hover:-translate-y-1'>Repositório</button> 
+                                <button className='w-fit cursor-pointer p-2 bg-blue-500 rounded-sm transition duration-300 hover:-translate-y-2' >Projeto</button> 
+                                <button className='w-fit mt-2 mr-2 cursor-pointer p-2 bg-blue-500 rounded-sm  transition duration-300 hover:-translate-y-1'>Repositório</button> 
                             </div>
                         </div>
                         
