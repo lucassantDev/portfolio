@@ -10,7 +10,7 @@ function Projects() {
             title: 'Pomodoro',
             description: 'Projeto desenvolvido com Vue.js para lógica e Tailwind CSS para estilização.',
             repository: 'https://github.com/lucassantDev/front-pomodoro',
-            test:'',
+            test: '',
             stack: ['Vue', 'Tailwind']
         },
         {
@@ -65,12 +65,13 @@ function Projects() {
                                 </div>
                             }
                             <hr className='mt-2 bg-slate-800'/>
-                            <div className='mt-4  flex flex-wrap'>
-                                <button className='w-fit cursor-pointer p-2 mr-2 bg-blue-500 rounded-sm transition duration-300 hover:-translate-y-1' onClick={() => divProjeto(project.id)}>
+                            <div className='mt-4 flex flex-wrap'>
+                                <button className='w-fit cursor-pointer p-2 mr-2 bg-blue-500 rounded-sm transition duration-300 hover:-translate-y-2' onClick={() => divProjeto(project.id)}>
                                     {projetoClicado === project.id ?  'Fechar' : 'Ver'}
                                 </button>
-                                <button className='w-fit cursor-pointer p-2 bg-blue-500 rounded-sm transition duration-300 hover:-translate-y-2' >Projeto</button> 
-                                <button className='w-fit mt-2 mr-2 cursor-pointer p-2 bg-blue-500 rounded-sm  transition duration-300 hover:-translate-y-1'>Repositório</button> 
+                                <a href target='_blank' className='w-fit cursor-pointer p-2 bg-blue-500 rounded-sm transition duration-300 hover:-translate-y-2'>Projeto</a> 
+                                <a href={project.repository} target='_blank' className='w-fit cursor-pointer p-2 mt-2 bg-blue-500 rounded-sm transition duration-300 hover:-translate-y-2 md:ml-2 md:mt-0'>Repositório</a> 
+                
                             </div>
                         </div>
                         
