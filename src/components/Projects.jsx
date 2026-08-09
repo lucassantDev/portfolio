@@ -12,7 +12,7 @@ function Projects() {
             title: 'Pomodoro',
             img: Pomodoro,
             description: 'Projeto desenvolvido com Vue.js para lógica e Tailwind CSS para estilização.',
-            repository: 'https://github.com/lucassantDev/front-pomodoro',
+            repository: 'https://front-pomodoro-smoky.vercel.app/',
             test: 'front-pomodoro-smoky.vercel.app',
             stack: ['Vue', 'Tailwind']
         },
