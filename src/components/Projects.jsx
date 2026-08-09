@@ -1,4 +1,6 @@
 import {useState, useEffect} from 'react';
+import Pomodoro from '../assets/img/pomodoro.png';
+import ListaCompras from '../assets/img/lista-de-compras.png'
 
 function Projects() {
 
@@ -8,16 +10,18 @@ function Projects() {
         {
             id: 1,
             title: 'Pomodoro',
+            img: Pomodoro,
             description: 'Projeto desenvolvido com Vue.js para lógica e Tailwind CSS para estilização.',
             repository: 'https://github.com/lucassantDev/front-pomodoro',
-            test: '',
+            test: 'front-pomodoro-smoky.vercel.app',
             stack: ['Vue', 'Tailwind']
         },
         {
             id: 2,
             title: 'Lista de Compras',
+            img: ListaCompras,
             description: 'Projeto da rocketseat com foco total na interatividade do javascript com a página.',
-            test: '',
+            test: 'https://lucassantdev.github.io/lista-compras/',
             repository: 'https://github.com/lucassantDev/lista-compras',
             stack: ['JavaScript', 'HTML', 'CSS']
         }
@@ -35,11 +39,11 @@ function Projects() {
 
     return (
         <>
-            <section className='flex flex-col items-center justify-center h-screen w-full border bg-slate-900 px-2'>
+            <section className='flex flex-col items-center justify-center h-screen w-full  bg-slate-900 px-2'>
 
                 <h1 className='mb-6 text-3xl font-bold text-gray-300 md:text-4xl'>Projetos</h1>
 
-                <div className='h-fit border p-8 flex flex-col gap-2 md:w-1/2 '>
+                <div className='h-fit  p-8 flex flex-col gap-2 md:w-1/2 '>
                     {projects.map((project, index) => (
                         <div
                             key={project.id ?? index}
@@ -51,7 +55,13 @@ function Projects() {
                             <h2 className='mb-2 text-lg font-semibold'>{project.title}</h2>
                             {
                                 projetoClicado === project.id && 
+                                <>
+                                    <img src={project.img}
+                                    className='w-full'
+                                    />
                                 <p className='text-sm text-gray-400'>{project.description}</p>
+                                </>
+                                
                             }
 
                             {
@@ -66,11 +76,11 @@ function Projects() {
                             }
                             <hr className='mt-2 bg-slate-800'/>
                             <div className='mt-4 flex flex-wrap'>
-                                <button className='w-fit cursor-pointer p-2 mr-2 bg-blue-500 rounded-sm transition duration-300 hover:-translate-y-2' onClick={() => divProjeto(project.id)}>
+                                <button className='w-fit cursor-pointer p-2 mr-2 bg-blue-500 rounded-sm transition duration-300 hover:-translate-y-1' onClick={() => divProjeto(project.id)}>
                                     {projetoClicado === project.id ?  'Fechar' : 'Ver'}
                                 </button>
-                                <a href target='_blank' className='w-fit cursor-pointer p-2 bg-blue-500 rounded-sm transition duration-300 hover:-translate-y-2'>Projeto</a> 
-                                <a href={project.repository} target='_blank' className='w-fit cursor-pointer p-2 mt-2 bg-blue-500 rounded-sm transition duration-300 hover:-translate-y-2 md:ml-2 md:mt-0'>Repositório</a> 
+                                <a href={project.test} target='_blank' className='w-fit cursor-pointer p-2 bg-blue-500 rounded-sm transition duration-300 hover:-translate-y-1'>Projeto</a> 
+                                <a href={project.repository} target='_blank' className='w-fit cursor-pointer p-2 mt-2 bg-blue-500 rounded-sm transition duration-300 hover:-translate-y-1 md:ml-2 md:mt-0'>Repositório</a> 
                 
                             </div>
                         </div>
