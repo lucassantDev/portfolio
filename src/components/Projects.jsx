@@ -4,8 +4,6 @@ import ListaCompras from '../assets/img/lista-de-compras.png'
 
 function Projects() {
 
-
-    // Lista de projetos que será exibida em formato de cards
     const projects = [
         {
             id: 1,
@@ -31,10 +29,6 @@ function Projects() {
     const [projetoClicado, setProjetoClicado] = useState(null)
     function divProjeto(id){
         setProjetoClicado((atual) => (atual === id ? null: id))
-    }
-
-    function linkProjeto(link){
-        window.open(link)
     }
 
     return (
