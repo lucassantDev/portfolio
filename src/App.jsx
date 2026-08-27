@@ -4,6 +4,7 @@ import AboutMe from './components/AboutMe.jsx'
 import Links from './components/Links.jsx'
 import Skills from './components/Skills.jsx'
 import Projects from './components/Projects.jsx'
+import Certificate from "./components/Certificate.jsx"
 import Footer from './components/Footer.jsx'
 
 function App() {
@@ -14,10 +15,11 @@ function App() {
       <FirstSection/>
       <Links/>
       <AboutMe/>
-      <Skills/>
+      <Skills />
+      <Certificate/>
       <Projects/>
       <Footer/>
-
+    
     </>
   )
 }
