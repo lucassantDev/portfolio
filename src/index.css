@@ -1,1 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+
+body{
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
+
+@theme {
+  --animate-aurora: aurora 8s ease-in-out infinite alternate;
+
+  @keyframes aurora {
+    0% {
+      background-position: 0% 50%;
+      transform: rotate(-5deg) scale(1.1);
+    }
+
+    50% {
+      background-position: 100% 50%;
+      transform: rotate(5deg) scale(1.1);
+    }
+
+    100% {
+      background-position: 0% 50%;
+      transform: rotate(-5deg) scale(1.1);
+    }
+  }
+}
