@@ -6,7 +6,7 @@ function Footer(){
     return(
         <>
             <footer className="flex items-center justify-center h-30 py-12 bg-slate-900">
-                <p className="text-blue-700">
+                <p className="text-gray-300 font-bold">
                     © {anoAtual} - lucassantDev Portfólio
                 </p>
             </footer>
