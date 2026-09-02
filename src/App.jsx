@@ -1,14 +1,27 @@
-// import { useState } from 'react'
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Portfolio from "./components/Portfolio";
+import Options from "./components/Options";
+import AboutMe from "./components/AboutMe";
 
 function App() {
-  // const [projetos, setProjetos] = useState('')
-
   return (
-    <>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Portfolio />
+              <Options />
+            </>
+          }  
+        />
+
       
-    </>
-  )
+        <Route path="/sobre-mim" element={<AboutMe/>} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
