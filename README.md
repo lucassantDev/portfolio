@@ -1,6 +1,6 @@
 # lucassantDev Portfólio
 
-<img src="./portfolioImg.png" alt="Imagem do portfólio lucassantDev" width="100%" />
+<img src="./src/img/portfolio.png" alt="Imagem do portfólio lucassantDev" width="100%" />
 
 ## Sobre o projeto
 
