@@ -1,24 +1,34 @@
-// import { useState } from 'react'
-import FirstSection from './components/FirstSection.jsx'
-import AboutMe from './components/AboutMe.jsx'
-import Links from './components/Links.jsx'
-import Skills from './components/Skills.jsx'
-import Projects from './components/Projects.jsx'
-import Footer from './components/Footer.jsx'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Portfolio from "./components/Portfolio";
+import Options from "./components/Options";
+import AboutMe from "./components/AboutMe";
+import Certificate from "./components/Certificate";
+import Stacks from "./components/Stacks";
+import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 
 function App() {
-  // const [projetos, setProjetos] = useState('')
-
   return (
-    <>
-      <FirstSection/>
-      {/* <Links/> */}
-      <AboutMe/>
-      <Skills/>
-      <Projects/>
-      <Footer/>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Portfolio />
+              <Options />
+              <Footer />
+            </>
+          }  
+        />
+        <Route path="/sobre-mim" element={<AboutMe/>} />
+        <Route path="/tecnologias" element={<Stacks/>} />
+        <Route path="/certificado" element={<Certificate/>} />
+        <Route path="/projetos" element={<Projects/>} />
+      </Routes>
+    </BrowserRouter>
+
+  );
 }
 
-export default App
+export default App;

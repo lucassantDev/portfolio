@@ -1,4 +1,4 @@
-function Projects() {
+function Certificate() {
     return (
         <>
             <section className="border w-full h-screen">
@@ -8,4 +8,4 @@ function Projects() {
     )
 }
 
-export default Projects;
+export default Certificate;
