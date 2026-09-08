@@ -60,6 +60,12 @@ body{
   }
 }
 
+@keyframes rotateTitle {
+  0%{
+    
+  }  
+}
+
 
 @theme {
   --animate-aurora: aurora 8s ease-in-out infinite alternate;

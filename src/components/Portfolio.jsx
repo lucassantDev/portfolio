@@ -9,6 +9,7 @@ function Portfolio() {
                     portfólio
                 </h1>
 
+
                 <div className=" -mb-44 w-full h-24 lg:-mb-92 flex flex-col ">
                     <p className="text-sm font-semibold ml-6">Lucas Santana</p>
                     <div className="text-gray-400 flex items-center">
@@ -17,11 +18,11 @@ function Portfolio() {
                     </div>
                     <div className="flex items-center ml-6 gap-2"> 
                         <div className="flex justify-center cursor-pointer">
-                            <FaLinkedin size={30} />
+                            <FaLinkedin size={30} className="transition duration-300 hover:text-blue-500"/>
                             {/* <p className="text-sm">Linkedin</p> */}
                         </div>
                         <div className="flex items-center justify-center cursor-pointer">
-                            <FaGithubSquare size={30}/>
+                            <FaGithubSquare size={30} className="transition duration-300 hover:text-gray-700"/>
                             {/* <p className="text-sm text-gray-400">Github</p> */}
                         </div>
                     </div>
