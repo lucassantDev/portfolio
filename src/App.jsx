@@ -23,7 +23,7 @@ function App() {
         />
         <Route path="/sobre-mim" element={<AboutMe/>} />
         <Route path="/tecnologias" element={<Stacks/>} />
-        <Route path="/certificado" element={<Certificate/>} />
+        <Route path="/certificados" element={<Certificate/>} />
         <Route path="/projetos" element={<Projects/>} />
       </Routes>
     </BrowserRouter>
