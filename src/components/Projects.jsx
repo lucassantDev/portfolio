@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 
 function Projects() {
+
+
+    
     return (
         <>
             <section className="border w-full h-screen">
