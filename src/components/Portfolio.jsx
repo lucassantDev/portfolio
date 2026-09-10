@@ -2,6 +2,15 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 
 function Portfolio() {
+
+    function linkedinButton() {
+        return window.open("https://www.linkedin.com/in/lucassantdev/")
+    }
+
+    function githubButton() {
+        return window.open("https://github.com/lucassantDev")
+    }
+
     return (
         <>
             <section className="w-full h-screen flex flex-col items-center justify-center">
@@ -18,12 +27,10 @@ function Portfolio() {
                     </div>
                     <div className="flex items-center ml-6 gap-2"> 
                         <div className="flex justify-center cursor-pointer">
-                            <FaLinkedin size={30} className="transition duration-300 hover:text-blue-500"/>
-                            {/* <p className="text-sm">Linkedin</p> */}
+                            <FaLinkedin size={30} className="transition duration-300 hover:text-blue-500" onClick={linkedinButton} />
                         </div>
                         <div className="flex items-center justify-center cursor-pointer">
-                            <FaGithubSquare size={30} className="transition duration-300 hover:text-gray-700"/>
-                            {/* <p className="text-sm text-gray-400">Github</p> */}
+                            <FaGithubSquare size={30} className="transition duration-300 hover:text-gray-700" onClick={githubButton} />
                         </div>
                     </div>
                 </div>
