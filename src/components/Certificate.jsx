@@ -21,15 +21,15 @@ function Certificate() {
 
     return (
         <>
-            <section className="border w-full h-fit">
+            <section className="w-full h-fit">
                 <p className="ml-12 mt-12 mb-12 font-semibold text-gray-300 text-md font-space trasition duration-300 hover:text-gray-600">
                     <Link to="/">Inicio</Link> / <span className="text-gray-400">Certificados</span>
                 </p>
-                <div className="w-full h-fit border py-12 flex flex-col items-center justify-evenly gap-12">
+                <div className="w-full h-fit py-12 flex flex-col items-center justify-evenly gap-12">
                     {certificates.map((certificate) => (
                         <div key={certificate.id} className="w-4/5 h-fit  flex flex-col items-center justify-evenly">
-                            <img src={certificate.image} alt="" className="lg:w-2/3 object-cover mt-6 shadow-xl"/>
-                            <p className="text-blue-400 text-center lg:text-2xl font-semibold mt-2">{certificate.titulo} • {certificate.instituicao}</p>
+                            <img src={certificate.image} alt="imagem do certificado" className="lg:w-2/3 object-cover mt-6 shadow-xl"/>
+                            <p className="text-blue-400 text-center text-sm lg:text-2xl font-semibold mt-2">{certificate.titulo} • {certificate.instituicao}</p>
                         </div>
                     ))}
                 </div>
