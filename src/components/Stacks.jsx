@@ -52,12 +52,12 @@ function Stacks() {
     return (
         <>
             <section className="w-full h-screen">
-                <p className="ml-12 mt-12 mb-12 font-semibold text-gray-300 text-md font-space trasition duration-300 hover:text-gray-600">
+                <p className="ml-12 mt-12 mb-12  font-semibold text-gray-300 text-md font-space transition duration-300 hover:text-gray-600">
                     <Link to="/">Inicio</Link> / <span className="text-gray-400">Tecnologias e Ferramentas</span>
                 </p>
-                <div className="w-full flex items-center flex-col justify-center">
+                <div className="w-full flex items-start flex-col justify-center">
                     {stacks.map((stack) => (
-                        <div key={stack.id} className="my-4 lg:my-6 ml-6 w-full  flex items-center">
+                        <div key={stack.id} className="my-4 lg:my-6 ml-6 w-fit flex">
                             <div className={`ml-6 text-4xl lg:text-9xl ${stack.cor}`}>
                                 {stack.icone}
                             </div>
