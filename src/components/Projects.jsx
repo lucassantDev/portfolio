@@ -9,13 +9,13 @@ function Projects() {
             id: 1,
             nomeProjeto: "Pomodoro",
             image: PomodoroImg,
-            descricao: "Projeto criado com Vue.js para aprender conceitos dessa tecnologia. Estrutura, "
+            descricao: "Projeto criado com Vue.js para aprender conceitos dessa tecnologia."
         },
         {
             id: 2,
             nomeProjeto: "Lista de Compras",
             image: ListaCompras,
-            descricao: "Projeto do curso Full-Stack da Rocketseat, utilizando javascript, html e css. Manipulação do DOM, flexbox, criação de variáveis com css foram conceitos aprendidos nesse projeto"
+            descricao: "Projeto do curso Full-Stack da Rocketseat, utilizando javascript, html e css. Manipulação do DOM, flexbox, criação de variáveis com css foram conceitos aprendidos nesse projeto!"
         }
     ]
     
@@ -26,13 +26,17 @@ function Projects() {
                     <Link to="/">Inicio</Link> / <span className="text-gray-400">Projetos</span>
                 </p>
 
-                <div className="border flex flex-col items-center justify-center gap-2">
+                <div className="border flex flex-col items-center justify-center gap-2 pb-12">
                     {myProjects.map((project) => (
-                        <div key={project.id} className="flex flex-col items-center justify-center w-7/8 lg:w-3/4 h-4/5 border mt-12">
+                        <div key={project.id} className="flex flex-col items-center justify-center w-7/8 lg:w-3/4 h-4/5 mt-12 shadow-xl pb-4">
                             <img src={project.image} alt={project.descricao} className="w-full" />
-                            <p className="font-semibold lg:text-5xl mt-6">
+                            <p className="lg:font-extrabold lg:text-5xl mt-6 ml-2">
                                 {project.descricao}
                             </p>
+                            <div className="w-full flex mt-4 gap-2">
+                                <button className="shadow-md lg:ml-2 w-44 cursor-pointer font-semibold py-2 transition duration-300 hover:bg-gray-600 hover:text-gray-200">Projeto</button>
+                                <button className="shadow-md lg:ml-2 w-44 cursor-pointer font-semibold py-2 transition duration-300 hover:bg-gray-600 hover:text-gray-200">Repositório</button>
+                            </div>
                         </div>
                     ))}
                 </div>
