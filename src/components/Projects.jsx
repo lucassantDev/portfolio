@@ -28,8 +28,11 @@ function Projects() {
 
                 <div className="border flex flex-col items-center justify-center gap-2">
                     {myProjects.map((project) => (
-                        <div key={project.id} className="flex flex-col items-center justify-center w-3/4 h-4/5 border">
-                            <img src={project.image} alt={project.descricao}></img>
+                        <div key={project.id} className="flex flex-col items-center justify-center w-7/8 lg:w-3/4 h-4/5 border mt-12">
+                            <img src={project.image} alt={project.descricao} className="w-full" />
+                            <p className="font-semibold lg:text-5xl mt-6">
+                                {project.descricao}
+                            </p>
                         </div>
                     ))}
                 </div>
