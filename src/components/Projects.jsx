@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import PomodoroImg from "../assets/img/projects/pomodoro.png"
+import ListaCompras from "../assets/img/projects/lista-de-compras.png"
 
 function Projects() {
 
@@ -6,11 +8,13 @@ function Projects() {
         {
             id: 1,
             nomeProjeto: "Pomodoro",
+            image: PomodoroImg,
             descricao: "Projeto criado com Vue.js para aprender conceitos dessa tecnologia. Estrutura, "
         },
         {
             id: 2,
             nomeProjeto: "Lista de Compras",
+            image: ListaCompras,
             descricao: "Projeto do curso Full-Stack da Rocketseat, utilizando javascript, html e css. Manipulação do DOM, flexbox, criação de variáveis com css foram conceitos aprendidos nesse projeto"
         }
     ]
@@ -24,7 +28,9 @@ function Projects() {
 
                 <div className="border flex flex-col items-center justify-center gap-2">
                     {myProjects.map((project) => (
-                        <div key={project.id} className="flex flex-col items-center justify-center w-3/4 h-4/5 border"></div>
+                        <div key={project.id} className="flex flex-col items-center justify-center w-3/4 h-4/5 border">
+                            <img src={project.image} alt={project.descricao}></img>
+                        </div>
                     ))}
                 </div>
             </section>
