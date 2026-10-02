@@ -21,12 +21,12 @@ function Projects() {
     
     return (
         <>
-            <section className="border w-full h-fit">
+            <section className="w-full h-fit">
                 <p className="ml-12 mt-12 mb-12 font-semibold text-gray-300 text-md font-space trasition duration-300 hover:text-gray-600">
                     <Link to="/">Inicio</Link> / <span className="text-gray-400">Projetos</span>
                 </p>
 
-                <div className="border flex flex-col items-center justify-center gap-2 pb-12">
+                <div className=" flex flex-col items-center justify-center gap-2 pb-12">
                     {myProjects.map((project) => (
                         <div key={project.id} className="flex flex-col items-center justify-center w-7/8 lg:w-3/4 h-4/5 mt-12 shadow-xl pb-4">
                             <img src={project.image} alt={project.descricao} className="w-full" />
@@ -34,8 +34,8 @@ function Projects() {
                                 {project.descricao}
                             </p>
                             <div className="w-full flex mt-4 gap-2">
-                                <button className="shadow-md lg:ml-2 w-44 cursor-pointer font-semibold py-2 transition duration-300 hover:bg-gray-600 hover:text-gray-200">Projeto</button>
-                                <button className="shadow-md lg:ml-2 w-44 cursor-pointer font-semibold py-2 transition duration-300 hover:bg-gray-600 hover:text-gray-200">Repositório</button>
+                                <button className="shadow-md ml-2 w-24 lg:w-44 cursor-pointer text-md font-semibold py-2 transition duration-300 hover:bg-gray-600 hover:text-gray-200">Projeto</button>
+                                <button className="shadow-md lg:ml-2 w-24 lg:w-44 cursor-pointer text-md font-semibold py-2 transition duration-300 hover:bg-gray-600 hover:text-gray-200">Repositório</button>
                             </div>
                         </div>
                     ))}
