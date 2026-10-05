@@ -51,7 +51,7 @@ function Stacks() {
 
     return (
         <>
-            <section className="w-full h-fit">
+            <section className="w-full h-fit lg:h-screen">
                 <p className="ml-12 mt-12 mb-12  font-semibold text-gray-300 text-md font-space transition duration-300 hover:text-gray-600">
                     <Link to="/">Inicio</Link> / <span className="text-gray-400">Tecnologias e Ferramentas</span>
                 </p>
@@ -61,7 +61,7 @@ function Stacks() {
                             <div className={`ml-6 text-4xl lg:text-9xl ${stack.cor}`}>
                                 {stack.icone}
                             </div>
-                            <p className="text-5xl font-bold ml-4 text-gray-300 lg:text-9xl lg:ml-8">{stack.nome}</p>
+                            <p className="text-4xl font-bold ml-4 text-gray-300 lg:text-9xl lg:ml-8">{stack.nome}</p>
                         </div>
                     ))}
                 </div>
