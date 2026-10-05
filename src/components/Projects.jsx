@@ -9,15 +9,30 @@ function Projects() {
             id: 1,
             nomeProjeto: "Pomodoro",
             image: PomodoroImg,
-            descricao: "Projeto criado com Vue.js para aprender conceitos dessa tecnologia."
+            descricao: "Projeto criado com Vue.js para aprender conceitos desse framework.",
+            repositorio: "https://github.com/lucassantDev/front-pomodoro",
+            hospedagem: "https://github.com/lucassantDev"
         },
         {
             id: 2,
             nomeProjeto: "Lista de Compras",
             image: ListaCompras,
-            descricao: "Projeto do curso Full-Stack da Rocketseat, utilizando javascript, html e css. Manipulação do DOM, flexbox, criação de variáveis com css foram conceitos aprendidos nesse projeto!"
+            descricao: "Projeto do curso Full-Stack da Rocketseat, utilizando javascript, html e css. Manipulação do DOM, flexbox, criação de variáveis com css foram conceitos aprendidos nesse projeto!",
+            repositorio: "https://github.com/lucassantDev/lista-compras",
+            hospedagem: ""
         }
     ]
+
+    function repositoryProject(link) {
+        window.open(link, "_blank")
+    }
+
+    function seeProject(link) {
+        if (!link || "") {
+            return console.log("não há link referente ao projeto")
+        }
+        window.open(link, "_blank",)
+    }
     
     return (
         <>
@@ -30,12 +45,12 @@ function Projects() {
                     {myProjects.map((project) => (
                         <div key={project.id} className="flex flex-col items-center justify-center w-7/8 lg:w-3/4 h-4/5 mt-12 shadow-xl pb-4">
                             <img src={project.image} alt={project.descricao} className="w-full" />
-                            <p className="lg:font-extrabold lg:text-5xl mt-6 ml-2">
+                            <p className="lg:font-bold lg:text-4xl text-left mt-6 ml-2 py-4 w-full">
                                 {project.descricao}
                             </p>
                             <div className="w-full flex mt-4 gap-2">
-                                <button className="shadow-md ml-2 w-24 lg:w-44 cursor-pointer text-md font-semibold py-2 transition duration-300 hover:bg-gray-600 hover:text-gray-200">Projeto</button>
-                                <button className="shadow-md lg:ml-2 w-24 lg:w-44 cursor-pointer text-md font-semibold py-2 transition duration-300 hover:bg-gray-600 hover:text-gray-200">Repositório</button>
+                                <button onClick={()=> seeProject(project.hospedagem)} className="bg-blue-500 hover:bg-blue-800 text-gray-200 shadow-md ml-2 w-24 lg:w-44 cursor-pointer text-md font-semibold py-2 transition duration-300">Projeto</button>
+                                <button onClick={() => repositoryProject(project.repositorio)}  className="bg-blue-500 hover:bg-blue-800 text-gray-200 shadow-md lg:ml-2 w-24 lg:w-44 cursor-pointer text-md font-semibold py-2 transition duration-300">Repositório</button>
                             </div>
                         </div>
                     ))}
