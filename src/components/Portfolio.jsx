@@ -1,7 +1,26 @@
+import { useEffect, useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 
 function Portfolio() {
+    const [title, setTitle] = useState("portfólio");
+    const [isTitleVisible, setIsTitleVisible] = useState(true);
+
+    useEffect(() => {
+        let titleTimeout;
+        const titleInterval = setInterval(() => {
+            setIsTitleVisible(false);
+            titleTimeout = setTimeout(() => {
+                setTitle((currentTitle) => currentTitle === "portfólio" ? "lucassantDev" : "portfólio");
+                setIsTitleVisible(true);
+            }, 400);
+        }, 2500);
+
+        return () => {
+            clearInterval(titleInterval);
+            clearTimeout(titleTimeout);
+        };
+    }, []);
 
     function linkedinButton() {
         return window.open("https://www.linkedin.com/in/lucassantdev/")
@@ -14,8 +33,8 @@ function Portfolio() {
     return (
         <>
             <section className="w-full h-screen flex flex-col items-center justify-center">
-                <h1 className="mb-44 lg:mb-72 font-extrabold text-5xl lg:text-9xl">
-                    portfólio
+                <h1 className={`mb-44 lg:mb-72 font-extrabold text-5xl lg:text-9xl transition-opacity duration-400 ${isTitleVisible ? "opacity-100" : "opacity-0"}`}>
+                    {title}
                 </h1>
 
 
