@@ -18,6 +18,38 @@ body{
   animation: showText 1s linear;
 }
 
+.options-title {
+  animation: options-title-color 12s infinite;
+}
+
+.options-list > a:nth-child(2) .options-title {
+  animation-delay: -9s;
+}
+
+.options-list > a:nth-child(3) .options-title {
+  animation-delay: -6s;
+}
+
+.options-list > a:nth-child(4) .options-title {
+  animation-delay: -3s;
+}
+
+@keyframes options-title-color {
+  0%, 22.5%, 100% {
+    color: var(--color-blue-800);
+  }
+
+  25%, 97.5% {
+    color: var(--color-blue-400);
+  }
+}
+
+@media (min-width: 64rem) {
+  .options-title {
+    animation: none;
+  }
+}
+
 /* .developer-animation{
   animation: showDiv 3s linear
 } */
